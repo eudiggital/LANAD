@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LANAD – Laboratório Napoleão Dias</title>
+    <meta name="description" content="Laboratório de Análises Clínicas LANAD em Picos-PI. Qualidade e confiança com tecnologia avançada, equipe especializada e resultados rápidos. Agende seu exame!">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="fotos/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="fotos/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="fotos/favicon/favicon-16x16.png">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lanadRed: '#9D2E35',
+                        lanadDark: '#2A2A2A',
+                        lanadLight: '#F0F0F0',
+                        lanadRedDarker: '#7A242A',
+                        lanadDarkSlightlyLighter: '#3f3f3f'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="estilos.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalLab",
+      "name": "LANAD Laboratório Napoleão Dias",
+      "image": "fotos/logo.png",
+      "@id": "",
+      "url": "https://www.lanad.com.br",
+      "telephone": "+55-89-3422-3949",
+      "email": "lanad@lanad.com.br",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Olavo Bilac, nº 440",
+        "addressLocality": "Picos",
+        "addressRegion": "PI",
+        "addressCountry": "BR"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+55-89-99987-7447",
+        "contactType": "WhatsApp",
+        "areaServed": "BR",
+        "availableLanguage": "Portuguese"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "07:00",
+          "closes": "17:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "07:00",
+          "closes": "11:00"
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-white text-lanadDark">
+
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center">
+                    <img src="fotos/logo.png" alt="LANAD Laboratório Napoleão Dias" class="h-12 mr-2">
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link font-medium hover:text-lanadRed transition active">Início</a>
+                    <div class="dropdown relative group py-4 -my-4">
+                        <a href="exames.html" class="nav-link font-medium hover:text-lanadRed transition flex items-center"> Nossos Serviços <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-full -left-4 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white mt-0 py-2 w-52 rounded-md shadow-lg z-50">
+                            <a href="exames.html" class="block px-4 py-2 hover:bg-lanadLight">Orientação por Exames</a>
+                            <a href="convenios.html" class="block px-4 py-2 hover:bg-lanadLight">Convênios</a>
+                            <a href="resultados.html" class="block px-4 py-2 hover:bg-lanadLight">Resultados Online</a>
+                            <a href="coleta-domiciliar.html" class="block px-4 py-2 hover:bg-lanadLight">Coleta Domiciliar</a> </div>
+                    </div>
+                    <a href="unidades.html" class="nav-link font-medium hover:text-lanadRed transition">Unidades</a>
+                    <a href="quem-somos.html" class="nav-link font-medium hover:text-lanadRed transition">Sobre Nós</a>
+                    <a href="equipamentos.html" class="nav-link font-medium hover:text-lanadRed transition">Equipamentos</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="resultados.html" class="hidden md:block bg-lanadRed text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition">Resultados</a>
+                    <button class="md:hidden focus:outline-none" id="mobile-menu-button">
+                        <i class="fas fa-bars text-xl text-lanadRed"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="md:hidden hidden bg-white py-4" id="mobile-menu">
+                <a href="index.html" class="block py-2 text-lanadRed">Início</a>
+                <div class="py-2">
+                    <button class="flex items-center justify-between w-full focus:outline-none" id="services-toggle">
+                        <span>Nossos Serviços</span>
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div class="hidden pl-4 mt-2" id="services-menu">
+                        <a href="exames.html" class="block py-2 hover:text-lanadRed">Orientação por Exames</a>
+                        <a href="convenios.html" class="block py-2 hover:text-lanadRed">Convênios</a>
+                        <a href="resultados.html" class="block py-2 hover:text-lanadRed">Resultados Online</a>
+                        <a href="coleta-domiciliar.html" class="block py-2 hover:text-lanadRed">Coleta Domiciliar</a> </div>
+                </div>
+                <a href="unidades.html" class="block py-2 hover:text-lanadRed">Unidades</a>
+                <a href="quem-somos.html" class="block py-2 hover:text-lanadRed">Sobre Nós</a>
+                <a href="equipamentos.html" class="block py-2 hover:text-lanadRed">Equipamentos</a>
+                <a href="resultados.html" class="block mt-2 bg-lanadRed text-white px-4 py-2 rounded-md text-center">Resultados</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="animated-gradient-hero flex items-center justify-center min-h-[75vh] md:min-h-[85vh] py-20 text-center">
+            <div id="particles-js"></div>
+            <div class="hero-content-container container mx-auto px-4">
+                <h1 class="hero-title text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">LANAD</h1>
+                <p class="hero-subtitle text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-gray-200">Laboratório Napoleão Dias</p>
+                <div class="hero-buttons-container flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
+                    <a href="https://wa.me/5589999877447?text=Olá!%20Gostaria%20de%20agendar%20um%20exame." target="_blank" class="bg-white hover:bg-gray-200 text-lanadRed px-8 py-3 rounded-lg font-semibold transition duration-300 shadow-lg hover:shadow-xl text-lg transform hover:scale-105">Agende seu Exame</a>
+                    <a href="resultados.html" class="bg-lanadRed hover:bg-opacity-80 text-white px-8 py-3 rounded-lg font-semibold transition duration-300 shadow-lg hover:shadow-xl text-lg transform hover:scale-105">Resultados Online</a>
+                    <a href="exames.html" class="border-2 border-white hover:bg-white hover:text-lanadRed text-white px-8 py-3 rounded-lg font-semibold transition duration-300 shadow-lg hover:shadow-xl text-lg transform hover:scale-105">Nossos Exames</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 bg-lanadLight">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center justify-center">
+                    <div class="md:w-1/4 flex justify-center mb-8 md:mb-0">
+                        <a href="certificado.html" title="Clique para ver o certificado completo">
+                            <img src="fotos/IMG_0964.JPG" alt="Certificado de Acreditação DICQ SBAC 2024-2025" class="rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 w-full max-w-[200px] h-auto">
+                        </a>
+                    </div>
+                    <div class="md:w-3/4 text-center md:text-left md:pl-12">
+                        <h2 class="text-3xl font-bold mb-4 text-lanadRed">Qualidade e Confiança Acreditadas</h2>
+                        <p class="text-lg mb-6">O LANAD tem seu Sistema de Gestão da Qualidade acreditado pelo DICQ, o Sistema Nacional de Acreditação da Sociedade Brasileira de Análises Clínicas (SBAC). Esta acreditação confirma nossa competência técnica em conformidade com os requisitos da Norma NBR NM ISO 15189:2015. Clique no selo para ver o certificado válido de 19/07/2024 a 19/07/2025.</p>
+                        <a href="certificado.html" class="inline-block bg-lanadRed hover:bg-opacity-90 text-white px-6 py-2 rounded-md font-medium transition">Certificado de Acreditação</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-lanadDark">Nossos Diferenciais</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-lanadLight p-6 rounded-lg shadow-md hover:shadow-xl transition text-center">
+                        <div class="text-lanadRed text-4xl mb-4"><i class="fas fa-microscope"></i></div>
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">Tecnologia Avançada</h3>
+                        <p class="text-gray-600">Equipamentos de última geração para diagnósticos precisos.</p>
+                    </div>
+                    <div class="bg-lanadLight p-6 rounded-lg shadow-md hover:shadow-xl transition text-center">
+                        <div class="text-lanadRed text-4xl mb-4"><i class="fas fa-users"></i></div>
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">Equipe Especializada</h3>
+                        <p class="text-gray-600">Profissionais qualificados e dedicados ao seu atendimento.</p>
+                    </div>
+                    <div class="bg-lanadLight p-6 rounded-lg shadow-md hover:shadow-xl transition text-center">
+                        <div class="text-lanadRed text-4xl mb-4"><i class="fas fa-heartbeat"></i></div>
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">Atendimento Humanizado</h3>
+                        <p class="text-gray-600">Cuidado e atenção individualizados em todas as etapas.</p>
+                    </div>
+                    <div class="bg-lanadLight p-6 rounded-lg shadow-md hover:shadow-xl transition text-center">
+                        <div class="text-lanadRed text-4xl mb-4"><i class="fas fa-shipping-fast"></i></div>
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">Agilidade nos Resultados</h3>
+                        <p class="text-gray-600">Resultados rápidos para sua tranquilidade e conveniência.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 bg-lanadRed">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-10 text-white">Conheça Nossos Serviços</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <a href="exames.html" class="service-card bg-white p-6 rounded-lg shadow-lg transition flex flex-col items-center text-center hover:bg-lanadLight">
+                        <i class="fas fa-flask text-4xl mb-4 text-lanadRed"></i>
+                        <h3 class="font-semibold text-lg text-lanadDark">Nossos Exames</h3>
+                        <p class="text-gray-600 text-sm mt-1">Veja a lista completa de exames e preparos.</p>
+                    </a>
+                    <a href="convenios.html" class="service-card bg-white p-6 rounded-lg shadow-lg transition flex flex-col items-center text-center hover:bg-lanadLight">
+                        <i class="fas fa-handshake text-4xl mb-4 text-lanadRed"></i>
+                        <h3 class="font-semibold text-lg text-lanadDark">Convênios</h3>
+                        <p class="text-gray-600 text-sm mt-1">Confira os planos de saúde que atendemos.</p>
+                    </a>
+                    <a href="unidades.html" class="service-card bg-white p-6 rounded-lg shadow-lg transition flex flex-col items-center text-center hover:bg-lanadLight">
+                        <i class="fas fa-map-marker-alt text-4xl mb-4 text-lanadRed"></i>
+                        <h3 class="font-semibold text-lg text-lanadDark">Nossas Unidades</h3>
+                        <p class="text-gray-600 text-sm mt-1">Encontre a unidade mais próxima de você.</p>
+                    </a>
+                    <a href="resultados.html" class="service-card bg-white p-6 rounded-lg shadow-lg transition flex flex-col items-center text-center hover:bg-lanadLight">
+                        <i class="fas fa-file-medical-alt text-4xl mb-4 text-lanadRed"></i>
+                        <h3 class="font-semibold text-lg text-lanadDark">Resultados Online</h3>
+                        <p class="text-gray-600 text-sm mt-1">Acesse seus resultados com segurança.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-3xl font-bold mb-6 text-lanadDark">Sobre o LANAD</h2>
+                    <p class="text-lg text-gray-700 mb-8">Fundado com a missão de oferecer excelência em diagnósticos e um atendimento que valoriza o ser humano, o LANAD se orgulha de ser uma referência em análises clínicas em Picos e região.</p>
+                    <a href="quem-somos.html" class="inline-block bg-lanadRed hover:bg-opacity-90 text-white px-8 py-3 rounded-md font-medium transition text-lg">Conheça Nossa História</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 bg-lanadLight">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-lanadDark">O que dizem sobre nós</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="testimonial-card bg-white p-6 rounded-lg shadow-md"><div class="flex items-center mb-4"><div class="w-12 h-12 rounded-full bg-lanadRed flex items-center justify-center text-white font-bold mr-4">A</div><div><h4 class="font-semibold text-lanadDark">Ana Maria B.</h4><div class="flex text-yellow-400"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div></div><p class="text-gray-600">"Atendimento excelente e resultados rápidos. Fui muito bem tratada por toda a equipe do LANAD."</p></div>
+                    <div class="testimonial-card bg-white p-6 rounded-lg shadow-md"><div class="flex items-center mb-4"><div class="w-12 h-12 rounded-full bg-lanadRed flex items-center justify-center text-white font-bold mr-4">J</div><div><h4 class="font-semibold text-lanadDark">José Carlos P.</h4><div class="flex text-yellow-400"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div></div><p class="text-gray-600">"Laboratório muito limpo e organizado. Os exames foram feitos com cuidado e os resultados vieram antes do prazo."</p></div>
+                </div>
+                <div class="text-center mt-8"><a href="quem-somos.html#depoimentos-todos" class="text-lanadRed hover:underline font-medium">Ver mais depoimentos</a></div>
+            </div>
+        </section>
+
+        <section id="contato" class="py-16 bg-white">
+             <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center mb-12"><h2 class="text-4xl font-bold text-lanadDark">Informações de Contato</h2><p class="text-lg text-gray-600 mt-3">Estamos à disposição para atender você!</p></div>
+                <div class="max-w-xl mx-auto bg-lanadLight p-8 md:p-10 rounded-xl shadow-xl border border-gray-200">
+                    <div class="space-y-6 text-gray-700">
+                        <div class="flex items-start"><i class="fas fa-map-marker-alt text-lanadRed fa-fw mt-1 mr-4 text-2xl w-6 text-center"></i><div><h4 class="font-semibold text-lanadDark text-lg">Endereço (Matriz)</h4><p>Rua Olavo Bilac, nº 440, Centro, Picos – PI</p></div></div>
+                        <div class="flex items-center"><i class="fas fa-phone-alt text-lanadRed fa-fw mr-4 text-2xl w-6 text-center"></i><div><h4 class="font-semibold text-lanadDark text-lg">Telefone</h4><p><a href="tel:+558934223949" class="hover:text-lanadRed transition duration-300">(89) 3422-3949</a></p></div></div>
+                        <div class="flex items-center"><i class="fab fa-whatsapp text-lanadRed fa-fw mr-4 text-2xl w-6 text-center"></i><div><h4 class="font-semibold text-lanadDark text-lg">WhatsApp</h4><p><a href="https://wa.me/5589999877447?text=Olá!%20Gostaria%20de%20mais%20informações." target="_blank" class="hover:text-lanadRed transition duration-300">(89) 9 9987-7447</a></p></div></div>
+                        <div class="flex items-center"><i class="fas fa-envelope text-lanadRed fa-fw mr-4 text-2xl w-6 text-center"></i><div><h4 class="font-semibold text-lanadDark text-lg">E-mail</h4><p><a href="mailto:lanad@lanad.com.br" class="hover:text-lanadRed transition duration-300">lanad@lanad.com.br</a></p></div></div>
+                        <div class="flex items-start"><i class="fas fa-clock text-lanadRed fa-fw mt-1 mr-4 text-2xl w-6 text-center"></i><div><h4 class="font-semibold text-lanadDark text-lg">Horário (Matriz)</h4><p>Segunda a Sexta: 7h às 17h30<br>Sábado: 7h às 11h</p></div></div>
+                    </div>
+                    <div class="mt-10 pt-8 border-t border-gray-300 text-center"><h4 class="text-lg font-semibold text-lanadDark mb-4">Siga-nos nas Redes Sociais</h4><div class="flex justify-center space-x-5"><a href="https://www.facebook.com/LaboratorioNapoleaoDias" aria-label="Facebook LANAD" class="text-lanadRed hover:text-opacity-75 transition duration-300 text-3xl"><i class="fab fa-facebook-square"></i></a><a href="https://www.instagram.com/lanadlab/" aria-label="Instagram LANAD" class="text-lanadRed hover:text-opacity-75 transition duration-300 text-3xl"><i class="fab fa-instagram-square"></i></a></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="noticias" class="py-16 bg-lanadLight">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-lanadDark">Fique por Dentro</h2>
+                    <p class="text-lg text-gray-600 mt-3">Confira nossas últimas notícias e dicas de saúde.</p>
+                </div>
+                
+                <div class="swiper news-carousel relative">
+                    <div class="swiper-wrapper">
+                        
+                        <div class="swiper-slide h-auto">
+                            <div class="flex flex-col h-full bg-white rounded-lg shadow-md overflow-hidden">
+                                <img src="fotos/labceacreditacao-002.jpg" alt="Certificado de Acreditação DICQ" class="w-full h-48 object-cover">
+                                <div class="p-6 flex flex-col flex-grow">
+                                    <h3 class="font-semibold text-xl mb-3 text-lanadDark">LANAD é Acreditado pelo DICQ</h3>
+                                    <p class="text-gray-700 mb-4 flex-grow">O LANAD é o único laboratório da cidade com “Certificado de Acreditação” do Sistema Nacional DICQ, seguindo a Norma ISO 15189 para garantir máxima qualidade.</p>
+                                    <a href="noticia-acreditacao.html" class="font-semibold text-lanadRed hover:underline mt-auto">Leia Mais &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide h-auto">
+                            <div class="flex flex-col h-full bg-white rounded-lg shadow-md overflow-hidden">
+                                <img src="fotos/filho.png" alt="Criança em consulta" class="w-full h-48 object-cover">
+                                <div class="p-6 flex flex-col flex-grow">
+                                    <h3 class="font-semibold text-xl mb-3 text-lanadDark">Prepare seu Filho para um Exame</h3>
+                                    <p class="text-gray-700 mb-4 flex-grow">Testes médicos podem ser assustadores para crianças. Conquistar a confiança e definir expectativas realistas pode tornar a experiência mais tranquila. Veja 3 dicas simples.</p>
+                                    <a href="noticia-preparar-filho.html" class="font-semibold text-lanadRed hover:underline mt-auto">Leia Mais &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide h-auto">
+                            <div class="flex flex-col h-full bg-white rounded-lg shadow-md overflow-hidden">
+                                <img src="fotos/mf.jpg" alt="Ilustração de um feto no útero" class="w-full h-48 object-cover">
+                                <div class="p-6 flex flex-col flex-grow">
+                                    <h3 class="font-semibold text-xl mb-3 text-lanadDark">Sexagem Fetal: Menino ou Menina?</h3>
+                                    <p class="text-gray-700 mb-4 flex-grow">Descubra o sexo do bebê a partir da 8ª semana de gestação com uma simples amostra de sangue. Uma inovação em comparação com a ecografia tradicional.</p>
+                                    <a href="noticia-sexagem-fetal.html" class="font-semibold text-lanadRed hover:underline mt-auto">Leia Mais &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide h-auto">
+                            <div class="flex flex-col h-full bg-white rounded-lg shadow-md overflow-hidden">
+                                <img src="fotos/ansiedade.jpg" alt="Pessoa praticando exercício" class="w-full h-48 object-cover">
+                                <div class="p-6 flex flex-col flex-grow">
+                                    <h3 class="font-semibold text-xl mb-3 text-lanadDark">Exercícios Contra Ansiedade e Depressão</h3>
+                                    <p class="text-gray-700 mb-4 flex-grow">O estresse do cotidiano afeta a saúde mental. Você sabia que a prática de exercícios físicos é uma poderosa aliada no combate à depressão e ansiedade?</p>
+                                    <a href="noticia-exercicios.html" class="font-semibold text-lanadRed hover:underline mt-auto">Leia Mais &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide h-auto">
+                            <div class="flex flex-col h-full bg-white rounded-lg shadow-md overflow-hidden">
+                                <img src="fotos/sono.jpeg" alt="Pessoa dormindo tranquilamente" class="w-full h-48 object-cover">
+                                <div class="p-6 flex flex-col flex-grow">
+                                    <h3 class="font-semibold text-xl mb-3 text-lanadDark">A Importância de uma Boa Noite de Sono</h3>
+                                    <p class="text-gray-700 mb-4 flex-grow">Dormir mal pode causar ganho de peso e doenças cardíacas. O sono é tão vital para a saúde quanto comer bem e se exercitar. Entenda os benefícios.</p>
+                                    <a href="noticia-sono.html" class="font-semibold text-lanadRed hover:underline mt-auto">Leia Mais &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next text-lanadRed"></div>
+                    <div class="swiper-button-prev text-lanadRed"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="faq" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12"><h2 class="text-4xl font-bold text-lanadDark">Perguntas Frequentes</h2><p class="text-lg text-gray-600 mt-3">Tire suas dúvidas mais comuns sobre nossos serviços e exames.</p></div>
+                <div class="max-w-3xl mx-auto space-y-4">
+                    <div class="border border-gray-300 bg-lanadLight rounded-lg shadow-sm overflow-hidden"><button class="faq-question w-full flex justify-between items-center p-5 text-left focus:outline-none"><span class="font-semibold text-lanadDark text-lg">Preciso estar em jejum para todos os exames?</span><i class="fas fa-chevron-down text-lanadRed transition-transform duration-300"></i></button><div class="accordion-content"><div class="p-5 border-t border-gray-200 text-gray-700"><p>Não, o jejum só é necessário para alguns tipos de exames, como glicemia, colesterol e triglicerídeos. O tempo de jejum pode variar de 8 a 12 horas. Para outros exames como hemograma, por exemplo, o jejum não é obrigatório. Sempre consulte as orientações específicas para cada exame ou entre em contato conosco para esclarecer dúvidas.</p></div></div></div>
+                    <div class="border border-gray-300 bg-lanadLight rounded-lg shadow-sm overflow-hidden"><button class="faq-question w-full flex justify-between items-center p-5 text-left focus:outline-none"><span class="font-semibold text-lanadDark text-lg">Quanto tempo demora para ficar pronto o resultado do meu exame?</span><i class="fas fa-chevron-down text-lanadRed transition-transform duration-300"></i></button><div class="accordion-content"><div class="p-5 border-t border-gray-200 text-gray-700"><p>O prazo para liberação dos resultados varia conforme o tipo de exame. Exames mais simples como hemograma e glicemia geralmente ficam prontos em 1 dia útil. Já exames mais complexos como cultura de urina ou exames hormonais podem levar de 3 a 7 dias úteis. No momento da coleta, nosso atendente informará o prazo estimado para cada exame realizado.</p></div></div></div>
+                    <div class="border border-gray-300 bg-lanadLight rounded-lg shadow-sm overflow-hidden"><button class="faq-question w-full flex justify-between items-center p-5 text-left focus:outline-none"><span class="font-semibold text-lanadDark text-lg">Posso agendar exames pelo telefone ou site?</span><i class="fas fa-chevron-down text-lanadRed transition-transform duration-300"></i></button><div class="accordion-content"><div class="p-5 border-t border-gray-200 text-gray-700"><p>Sim, oferecemos agendamento por telefone através do nosso número <a href="tel:+558934223949" class="text-lanadRed hover:underline">(89) 3422-3949</a> e também via WhatsApp. O agendamento online pelo site está em desenvolvimento para facilitar ainda mais seu acesso. Para exames que exigem preparo especial, recomendamos que o agendamento seja feito com antecedência.</p></div></div></div>
+                    <div class="border border-gray-300 bg-lanadLight rounded-lg shadow-sm overflow-hidden"><button class="faq-question w-full flex justify-between items-center p-5 text-left focus:outline-none"><span class="font-semibold text-lanadDark text-lg">O laboratório LANAD possui acessibilidade?</span><i class="fas fa-chevron-down text-lanadRed transition-transform duration-300"></i></button><div class="accordion-content"><div class="p-5 border-t border-gray-200 text-gray-700"><p>Sim, todas as nossas unidades principais possuem estrutura adaptada para receber pacientes com mobilidade reduzida, incluindo rampas de acesso, banheiros adaptados e espaço adequado para circulação. Nossa equipe também está treinada para oferecer atendimento especializado quando necessário. Entre em contato para confirmar as facilidades específicas da unidade de sua preferência.</p></div></div></div>
+                    <div class="border border-gray-300 bg-lanadLight rounded-lg shadow-sm overflow-hidden"><button class="faq-question w-full flex justify-between items-center p-5 text-left focus:outline-none"><span class="font-semibold text-lanadDark text-lg">Como devo me preparar para exames de sangue?</span><i class="fas fa-chevron-down text-lanadRed transition-transform duration-300"></i></button><div class="accordion-content"><div class="p-5 border-t border-gray-200 text-gray-700"><p>As orientações de preparo variam conforme o exame, mas de forma geral recomendamos:</p><ul class="list-disc pl-5 mt-2 space-y-1"><li>Jejum de 8 a 12 horas para exames como glicemia e colesterol (a não ser que seu médico tenha orientado diferente).</li><li>Evitar exercícios físicos intensos no dia anterior.</li><li>Manter hidratação normal (a não ser que o exame exija restrição).</li><li>Evitar consumo de álcool 72 horas antes.</li><li>Informar sobre medicamentos em uso no momento da coleta.</li></ul><p class="mt-2">Para orientações específicas, consulte a página do exame em nosso site, verifique as instruções fornecidas pelo seu médico ou entre em contato conosco.</p></div></div></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-lanadDark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <a href="index.html" class="flex items-center">
+                            <img src="fotos/logo.png" alt="LANAD Laboratório Napoleão Dias" class="h-10 mr-2">
+                        </a>
+                    </div>
+                    <p class="text-sm text-gray-300 mb-2">Laboratório de Análises Clínicas. Precisão que cuida da sua saúde.</p>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-lanadRed transition text-gray-300">Início</a></li>
+                        <li><a href="exames.html" class="hover:text-lanadRed transition text-gray-300">Orientação por Exames</a></li>
+                        <li><a href="convenios.html" class="hover:text-lanadRed transition text-gray-300">Convênios</a></li>
+                        <li><a href="unidades.html" class="hover:text-lanadRed transition text-gray-300">Unidades</a></li>
+                        <li><a href="quem-somos.html" class="hover:text-lanadRed transition text-gray-300">Sobre Nós</a></li>
+                        <li><a href="equipamentos.html" class="hover:text-lanadRed transition text-gray-300">Equipamentos</a></li>
+                        <li><a href="coleta-domiciliar.html" class="hover:text-lanadRed transition text-gray-300">Coleta Domiciliar</a></li>
+                        <li><a href="index.html#faq" class="hover:text-lanadRed transition text-gray-300">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold mb-4">Contato</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start text-gray-300"><i class="fas fa-map-marker-alt mt-1 mr-2 text-lanadRed w-4"></i><span>Rua Olavo Bilac, nº 440, Centro, Picos – PI</span></li>
+                        <li class="flex items-center text-gray-300"><i class="fas fa-phone-alt mr-2 text-lanadRed w-4"></i><span>(89) 3422-3949</span></li>
+                        <li class="flex items-center text-gray-300"><i class="fab fa-whatsapp mr-2 text-lanadRed w-4"></i><span>(89) 9 9987-7447</span></li>
+                        <li class="flex items-center text-gray-300"><i class="fas fa-envelope mr-2 text-lanadRed w-4"></i><a href="mailto:lanad@lanad.com.br" class="hover:text-lanadRed transition duration-300">lanad@lanad.com.br</a></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h4 class="text-md font-semibold mb-4">Horário (Matriz)</h4>
+                    <ul class="space-y-1 text-sm text-gray-300">
+                        <li>Segunda a Sexta: 7h às 17h30</li>
+                        <li>Sábado: 7h às 11h</li>
+                        <li>Domingo: Fechado</li>
+                    </ul>
+                    <div class="mt-4">
+                        <h4 class="text-md font-semibold mb-2">Siga-nos</h4>
+                        <div class="flex space-x-3">
+                            <a href="https://www.facebook.com/LaboratorioNapoleaoDias" class="w-8 h-8 bg-gray-700 hover:bg-lanadRed rounded-full flex items-center justify-center transition"><i class="fab fa-facebook-f text-sm"></i></a>
+                            <a href="https://www.instagram.com/lanadlab/" class="w-8 h-8 bg-gray-700 hover:bg-lanadRed rounded-full flex items-center justify-center transition"><i class="fab fa-instagram text-sm"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-sm text-center text-gray-400">
+                <p>© <span id="currentYear"></span> LANAD Laboratório. Todos os direitos reservados.</p>
+                <a href="https://www.eudiggital.com.br" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center text-textMuted dark:text-gray-500 hover:text-primary dark:hover:text-primary transition-colors duration-200 text-xs mt-2 group">
+                    Desenvolvido por EuDiggital
+                    <img src="fotos/LOGO_REDONDA_EUDIGITAL.png" alt="Logo EUDiggital"
+                        class="h-4 ml-1.5 group-hover:opacity-80 transition-opacity duration-200">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://api.whatsapp.com/send/?phone=5589999877447" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg floating-whatsapp z-50">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+    <button id="back-to-top" class="fixed bottom-24 right-6 bg-lanadRed text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg z-50 hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

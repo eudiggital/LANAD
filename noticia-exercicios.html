@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Físicos no Combate à Ansiedade e Depressão - LANAD</title>
+    <meta name="description" content="Descubra como a prática regular de exercícios físicos auxilia na diminuição dos sintomas de ansiedade e depressão, estimulando a produção de endorfina.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="fotos/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="fotos/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="fotos/favicon/favicon-16x16.png">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lanadRed: '#9D2E35',
+                        lanadDark: '#2A2A2A',
+                        lanadLight: '#F0F0F0',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="bg-white text-lanadDark">
+
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center">
+                    <img src="fotos/logo.png" alt="LANAD Laboratório Napoleão Dias" class="h-12 mr-2">
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link font-medium hover:text-lanadRed transition active">Início</a>
+                    <div class="dropdown relative group py-4 -my-4">
+                        <a href="exames.html" class="nav-link font-medium hover:text-lanadRed transition flex items-center"> Nossos Serviços <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-full -left-4 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white mt-0 py-2 w-52 rounded-md shadow-lg z-50">
+                            <a href="exames.html" class="block px-4 py-2 hover:bg-lanadLight">Orientação por Exames</a>
+                            <a href="convenios.html" class="block px-4 py-2 hover:bg-lanadLight">Convênios</a>
+                            <a href="resultados.html" class="block px-4 py-2 hover:bg-lanadLight">Resultados Online</a>
+                            <a href="coleta-domiciliar.html" class="block px-4 py-2 hover:bg-lanadLight">Coleta Domiciliar</a>
+                        </div>
+                    </div>
+                    <a href="unidades.html" class="nav-link font-medium hover:text-lanadRed transition">Unidades</a>
+                    <a href="quem-somos.html" class="nav-link font-medium hover:text-lanadRed transition">Sobre Nós</a>
+                    <a href="equipamentos.html" class="nav-link font-medium hover:text-lanadRed transition">Equipamentos</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="resultados.html" class="hidden md:block bg-lanadRed text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition">Resultados</a>
+                    <button class="md:hidden focus:outline-none" id="mobile-menu-button">
+                        <i class="fas fa-bars text-xl text-lanadRed"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="md:hidden hidden bg-white py-4" id="mobile-menu">
+                <a href="index.html" class="block py-2 text-lanadRed">Início</a>
+                <div class="py-2">
+                    <button class="flex items-center justify-between w-full focus:outline-none" id="services-toggle">
+                        <span>Nossos Serviços</span>
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div class="hidden pl-4 mt-2" id="services-menu">
+                        <a href="exames.html" class="block py-2 hover:text-lanadRed">Orientação por Exames</a>
+                        <a href="convenios.html" class="block py-2 hover:text-lanadRed">Convênios</a>
+                        <a href="resultados.html" class="block py-2 hover:text-lanadRed">Resultados Online</a>
+                        <a href="coleta-domiciliar.html" class="block py-2 hover:text-lanadRed">Coleta Domiciliar</a>
+                    </div>
+                </div>
+                <a href="unidades.html" class="block py-2 hover:text-lanadRed">Unidades</a>
+                <a href="quem-somos.html" class="block py-2 hover:text-lanadRed">Sobre Nós</a>
+                <a href="equipamentos.html" class="block py-2 hover:text-lanadRed">Equipamentos</a>
+                <a href="resultados.html" class="block mt-2 bg-lanadRed text-white px-4 py-2 rounded-md text-center">Resultados</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-lanadLight py-10">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl font-bold text-lanadRed">Exercícios Físicos no Combate à Ansiedade e Depressão</h1>
+                <p class="text-lg text-gray-600 mt-2">Mova o corpo e cuide da sua saúde mental.</p>
+            </div>
+        </section>
+    
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 max-w-3xl">
+                <img src="fotos/ansiedade.jpg" alt="Pessoa se exercitando ao ar livre" class="w-full h-auto max-h-[450px] object-cover rounded-lg shadow-lg mx-auto mb-10 border">
+                
+                <div class="text-lg text-gray-700 leading-relaxed space-y-6">
+                    <p>O estresse do cotidiano é um dos principais fatores que, hoje, desencadeiam quadros de depressão e ansiedade. Cada vez mais comuns, essas doenças provocam queda na produtividade, afetam o organismo como um todo e atrapalham as mais diversas áreas da vida de uma pessoa.</p>
+                    <p>Mas você sabia que a prática de exercícios físicos, de forma isolada ou junto a tratamentos específicos, auxilia a diminuir os sintomas, trazendo bem-estar e qualidade de vida?</p>
+                    <p>A prática de exercícios físicos regulares estimula o organismo à produção de <strong>endorfina</strong>, responsável por causar sensação de bem-estar, aliviando a depressão e normalizando os níveis de ansiedade. As noradrenalinas e a serotonina, também responsáveis pelo equilíbrio do humor, são estabilizadas a partir da atividade física.</p>
+                    <p>Não se pode deixar de citar também os benefícios proporcionados pela melhora estética, como a <strong>autoconfiança</strong> e a <strong>autoestima</strong>.</p>
+                    <p>Para ajudar no combate à depressão, indica-se a prática de atividades físicas aeróbicas moderadas (frequência cardíaca de 60% a 80%) de três a cinco vezes por semana. Caminhadas curtas também ajudam, mas para um efeito prolongado é recomendada a atividade física regular.</p>
+                    <p>Aulas dinâmicas e bastante animadas como o JumpClass e aulas de dança como Ritmos ou Zumba auxiliam na queima de gordura, proporcionam a produção de endorfina e ainda divertem.</p>
+                    <p class="text-sm text-gray-500 mt-8 italic">Fonte: <a href="https://www.swimex.com.br/saude/exercicios-fisicos-combate-ansiedade-e-depressao/" target="_blank" rel="noopener noreferrer" class="hover:underline text-lanadRed">Swimex</a></p>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <a href="index.html#noticias" class="text-lanadRed hover:underline font-medium">&larr; Voltar para a página inicial</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-lanadDark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <a href="index.html" class="flex items-center">
+                            <img src="fotos/logo.png" alt="LANAD Laboratório Napoleão Dias" class="h-10 mr-2">
+                        </a>
+                    </div>
+                    <p class="text-sm text-gray-300 mb-2">Laboratório de Análises Clínicas. Precisão que cuida da sua saúde.</p>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-lanadRed transition text-gray-300">Início</a></li>
+                        <li><a href="exames.html" class="hover:text-lanadRed transition text-gray-300">Orientação por Exames</a></li>
+                        <li><a href="convenios.html" class="hover:text-lanadRed transition text-gray-300">Convênios</a></li>
+                        <li><a href="unidades.html" class="hover:text-lanadRed transition text-gray-300">Unidades</a></li>
+                        <li><a href="quem-somos.html" class="hover:text-lanadRed transition text-gray-300">Sobre Nós</a></li>
+                        <li><a href="equipamentos.html" class="hover:text-lanadRed transition text-gray-300">Equipamentos</a></li>
+                        <li><a href="coleta-domiciliar.html" class="hover:text-lanadRed transition text-gray-300">Coleta Domiciliar</a></li>
+                        <li><a href="index.html#faq" class="hover:text-lanadRed transition text-gray-300">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold mb-4">Contato</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start text-gray-300"><i class="fas fa-map-marker-alt mt-1 mr-2 text-lanadRed w-4"></i><span>Rua Olavo Bilac, nº 440, Centro, Picos – PI</span></li>
+                        <li class="flex items-center text-gray-300"><i class="fas fa-phone-alt mr-2 text-lanadRed w-4"></i><span>(89) 3422-3949</span></li>
+                        <li class="flex items-center text-gray-300"><i class="fab fa-whatsapp mr-2 text-lanadRed w-4"></i><span>(89) 9 9987-7447</span></li>
+                        <li class="flex items-center text-gray-300"><i class="fas fa-envelope mr-2 text-lanadRed w-4"></i><a href="mailto:lanad@lanad.com.br" class="hover:text-lanadRed transition duration-300">lanad@lanad.com.br</a></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h4 class="text-md font-semibold mb-4">Horário (Matriz)</h4>
+                    <ul class="space-y-1 text-sm text-gray-300">
+                        <li>Segunda a Sexta: 7h às 17h30</li>
+                        <li>Sábado: 7h às 11h</li>
+                        <li>Domingo: Fechado</li>
+                    </ul>
+                    <div class="mt-4">
+                        <h4 class="text-md font-semibold mb-2">Siga-nos</h4>
+                        <div class="flex space-x-3">
+                            <a href="https://www.facebook.com/LaboratorioNapoleaoDias" class="w-8 h-8 bg-gray-700 hover:bg-lanadRed rounded-full flex items-center justify-center transition"><i class="fab fa-facebook-f text-sm"></i></a>
+                            <a href="https://www.instagram.com/lanadlab/" class="w-8 h-8 bg-gray-700 hover:bg-lanadRed rounded-full flex items-center justify-center transition"><i class="fab fa-instagram text-sm"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-sm text-center text-gray-400">
+                <p>© <span id="currentYear"></span> LANAD Laboratório. Todos os direitos reservados.</p>
+                <a href="https://www.eudiggital.com.br" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center text-textMuted dark:text-gray-500 hover:text-primary dark:hover:text-primary transition-colors duration-200 text-xs mt-2 group">
+                    Desenvolvido por EuDiggital
+                    <img src="fotos/LOGO_REDONDA_EUDIGITAL.png" alt="Logo EUDiggital"
+                        class="h-4 ml-1.5 group-hover:opacity-80 transition-opacity duration-200">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://api.whatsapp.com/send/?phone=5589999877447" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg floating-whatsapp z-50">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+    <button id="back-to-top" class="fixed bottom-24 right-6 bg-lanadRed text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg z-50 hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>

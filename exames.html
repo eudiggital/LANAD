@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Confira a lista completa de exames laboratoriais oferecidos pelo LANAD e suas orientações de preparo. Busque por exames de bioquímica, hematologia, hormônios e mais.">
+    <title>Orientação por Exames - LANAD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="fotos/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="fotos/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="fotos/favicon/favicon-16x16.png">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lanadRed: '#9D2E35',
+                        lanadDark: '#2A2A2A',
+                        lanadLight: '#F0F0F0',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="bg-lanadLight text-lanadDark">
+
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center">
+                    <img src="fotos/logo.png" alt="LANAD Laboratório Napoleão Dias" class="h-12 mr-2">
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link font-medium hover:text-lanadRed transition">Início</a>
+                    <div class="dropdown relative group py-4 -my-4">
+                        <a href="exames.html" class="nav-link font-medium hover:text-lanadRed transition flex items-center active"> Nossos Serviços <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-full -left-4 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white mt-0 py-2 w-52 rounded-md shadow-lg z-50">
+                            <a href="exames.html" class="block px-4 py-2 hover:bg-lanadLight active">Orientação por Exames</a>
+                            <a href="convenios.html" class="block px-4 py-2 hover:bg-lanadLight">Convênios</a>
+                            <a href="resultados.html" class="block px-4 py-2 hover:bg-lanadLight">Resultados Online</a>
+                            <a href="coleta-domiciliar.html" class="block px-4 py-2 hover:bg-lanadLight">Coleta Domiciliar</a>
+                        </div>
+                    </div>
+                    <a href="unidades.html" class="nav-link font-medium hover:text-lanadRed transition">Unidades</a>
+                    <a href="quem-somos.html" class="nav-link font-medium hover:text-lanadRed transition">Sobre Nós</a>
+                    <a href="equipamentos.html" class="nav-link font-medium hover:text-lanadRed transition">Equipamentos</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="resultados.html" class="hidden md:block bg-lanadRed text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition">Resultados</a>
+                    <button class="md:hidden focus:outline-none" id="mobile-menu-button">
+                        <i class="fas fa-bars text-xl text-lanadRed"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="md:hidden hidden bg-white py-4" id="mobile-menu">
+                <a href="index.html" class="block py-2 hover:text-lanadRed">Início</a>
+                <div class="py-2">
+                    <button class="flex items-center justify-between w-full focus:outline-none text-lanadRed" id="services-toggle">
+                        <span>Nossos Serviços</span>
+                        <i class="fas fa-chevron-up text-xs"></i>
+                    </button>
+                    <div class="pl-4 mt-2" id="services-menu">
+                        <a href="exames.html" class="block py-2 text-lanadRed">Orientação por Exames</a>
+                        <a href="convenios.html" class="block py-2 hover:text-lanadRed">Convênios</a>
+                        <a href="resultados.html" class="block py-2 hover:text-lanadRed">Resultados Online</a>
+                        <a href="coleta-domiciliar.html" class="block py-2 hover:text-lanadRed">Coleta Domiciliar</a>
+                    </div>
+                </div>
+                <a href="unidades.html" class="block py-2 hover:text-lanadRed">Unidades</a>
+                <a href="quem-somos.html" class="block py-2 hover:text-lanadRed">Sobre Nós</a>
+                <a href="equipamentos.html" class="block py-2 hover:text-lanadRed">Equipamentos</a>
+                <a href="resultados.html" class="block mt-2 bg-lanadRed text-white px-4 py-2 rounded-md text-center">Resultados</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative bg-lanadDark text-white py-20">
+            <div class="absolute inset-0">
+                <img src="fotos/orientação.jpg" alt="Equipamentos de laboratório modernos" class="w-full h-full object-cover opacity-30">
+            </div>
+            <div class="container mx-auto px-4 relative z-10 text-center">
+                <h1 class="text-4xl font-bold">Preparo e Orientação para Exames</h1>
+                <p class="text-lg mt-2 text-gray-200 max-w-3xl mx-auto">Listagem dos exames laboratoriais mais procurados e suas respectivas orientações de preparo.</p>
+            </div>
+        </section>
+    
+        <section id="exames-orientacoes" class="py-12 bg-lanadLight">
+            <div class="container mx-auto px-4">
+                <div class="mb-10 max-w-2xl mx-auto">
+                    <div class="relative">
+                        <input type="text" id="exam-search-input" placeholder="Pesquisar exames por nome..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lanadRed focus:border-transparent shadow-sm">
+                        <button class="absolute right-3 top-3 text-gray-400 hover:text-lanadRed">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="mb-10 text-center">
+                    <h3 class="text-xl font-semibold mb-4 text-lanadDark">Filtrar por Categoria</h3>
+                    <div class="flex flex-wrap gap-2 justify-center" id="category-filters">
+                        <button data-category="todos" class="category-btn px-4 py-2 bg-lanadRed text-white rounded-full hover:bg-opacity-90 transition text-sm">Todos</button>
+                        <button data-category="bioquimica" class="category-btn px-4 py-2 bg-white hover:bg-lanadRed hover:text-white rounded-full transition text-sm border border-gray-300">Bioquímica</button>
+                        <button data-category="hematologia" class="category-btn px-4 py-2 bg-white hover:bg-lanadRed hover:text-white rounded-full transition text-sm border border-gray-300">Hematologia</button>
+                        <button data-category="hormonios" class="category-btn px-4 py-2 bg-white hover:bg-lanadRed hover:text-white rounded-full transition text-sm border border-gray-300">Hormônios</button>
+                        <button data-category="imunologia" class="category-btn px-4 py-2 bg-white hover:bg-lanadRed hover:text-white rounded-full transition text-sm border border-gray-300">Imunologia</button>
+                        <button data-category="urina-fezes" class="category-btn px-4 py-2 bg-white hover:bg-lanadRed hover:text-white rounded-full transition text-sm border border-gray-300">Urina e Fezes</button>
+                    </div>
+                </div>
+                
+                <div id="exam-list" class="max-w-4xl mx-auto space-y-4">
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="bioquimica">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE ÁCIDO ÚRICO</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="bioquimica">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE BILIRRUBINA TOTAL E FRAÇÕES</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório. Medicamentos à base de anfotericina b, levodopa, nitrofurantoína e piroxicam devem ser suspensos, a critério médico.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="bioquimica">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE CÁLCIO</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="bioquimica">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE CLORETO</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="bioquimica">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE COLESTEROL HDL</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="bioquimica">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE COLESTEROL LDL</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório. A abstinência de bebida alcoólica é desejável nas 72 horas que antecedem o teste.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="bioquimica">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE COLESTEROL TOTAL</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="bioquimica">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE CREATININA</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório. Devem ser suspensos medicamentos (a critério médico) a base de ácido ascórbico, cefoxitina, cefalotina, frutose, glicose, levodopa, metildopa, nitrofurantoína e piruvato.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="bioquimica">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">CREATINOFOSFOQUINASE (CPK)</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório. Suspender medicamentos (a critério médico) a base de anfotericina b, captopril e propanolol.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="bioquimica">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE FERRO SÉRICO</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="bioquimica">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE FOSFATASE ALCALINA</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="bioquimica">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE FÓSFORO</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="bioquimica">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE GAMA-GLUTAMIL-TRANSFERASE (GAMA GT)</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório. A abstinência de bebida alcoólica é desejável nas 72 horas que antecedem o teste. Suspender medicamentos (a critério médico) a base de fenitoína, fenobarbital e acetaminofen.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="bioquimica">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DESIDROGENASE LÁCTICA; LDH; DHL.</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="bioquimica">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE GLICOSE</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum obrigatório de 8 a 12 horas ou conforme orientação médica. Em caso de crianças, seguir orientação médica.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="bioquimica">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE MAGNÉSIO</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="bioquimica">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE POTÁSSIO</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="bioquimica">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE PROTEÍNAS TOTAIS</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="bioquimica">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE PROTEÍNAS TOTAIS E FRAÇÕES</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="bioquimica">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE SÓDIO</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum aconselhável de 4 horas.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="bioquimica">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE TRANSAMINASE GLUTÂMICO-OXALACÉTICA (TGO)</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="bioquimica">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE TRANSAMINASE GLUTAMICO-PIRUVICA (TGP)</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="bioquimica">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE TRIGLICERIDEOS</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório. Em casos de tempos específicos ou sem jejum fica a critério médico. A abstinência de bebida alcoólica é desejável nas 72 horas que antecedem o teste.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="bioquimica">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE UREIA</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="hematologia">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DETERMINAÇÃO DE VELOCIDADE DE HEMOSSEDIMENTAÇÃO (VHS)</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="hematologia">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">HEMOGRAMA COMPLETO</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="hematologia">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DETERMINAÇÃO DIRETA DE GRUPO ABO/RH</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="imunologia">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE PROTEÍNA C REATIVA (SEMI-QUANTITATIVO)</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="imunologia">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">PESQUISA DE ANTICORPOS ANTIESTREPTOLISINA O (ASLO)</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório. Informar o uso de medicamentos ou a existência de patologia tireoidiana.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="imunologia">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">PESQUISA DE ANTICORPOS CONTRA ANTÍGENO DE SUPERFÍCIE DO VÍRUS DA HEPATITE B (ANTI-HBS)</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="imunologia">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">PESQUISA DE ANTÍGENO DE SUPERFÍCIE DO VÍRUS DA HEPATITE B (HBSAG)</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="imunologia">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">TESTE NÃO TREPONÊMICO P/ DETECÇÃO DE SÍFILIS (TESTE RÁPIDO PARA SÍFILIS)</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="hormonios">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE GONADOTROFINA CORIÔNICA HUMANA (HCG,BETA HCG)</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="imunologia">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">PROVA DO LÁTEX P/PESQUISA DO FATOR REUMATÓIDE</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="imunologia">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">PESQUISA DE ANTICORPOS CONTRA O VÍRUS DA HEPATITE C (ANTI-HCV)</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="hormonios">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE 25 HIDROXIVITAMINA D</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="hormonios">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE PSA TOTAL E LIVRE</h3>
+                        <p class="text-gray-700 mb-2"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                        <p class="text-gray-700">Nas situações abaixo recomenda-se aguardar o tempo indicado antes da coleta do material.</p>
+                        <ul class="list-disc pl-6 mt-2 text-gray-700 space-y-1">
+                            <li>Após relação sexual com ejaculação, aguardar 2 dias;</li>
+                            <li>Após prática de ciclismo/equitação, aguardar 2 dias;</li>
+                            <li>Após cateterismo/sondagem uretral, aguardar 3 dias;</li>
+                            <li>Após toque retal/prostático, aguardar 3 dias;</li>
+                            <li>Após uso de supositório, aguardar 3 dias;</li>
+                            <li>Após Ultra-sonografia transretal, aguardar 7 dias;</li>
+                            <li>Após colonoscopia, aguardar 15 dias;</li>
+                            <li>Após massagem prostática, aguardar 6 semanas;</li>
+                            <li>Após biópsia prostática, aguardar 6 semanas.</li>
+                        </ul>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="bioquimica">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE ALFAFETOPROTEÍNA</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="imunologia">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE COMPLEMENTO C3</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="imunologia">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE COMPLEMENTO C4</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="imunologia">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">PESQUISA DE ANTICORPOS HIV-1 + HIV-2</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="imunologia">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">PESQUISA DE ANTICORPOS IGG ANTICITOMEGALOVÍRUS</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="imunologia">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">PESQUISA DE ANTICORPOS IGM ANTICITOMEGALOVÍRUS</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="imunologia">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">PESQUISA DE ANTICORPOS IGM e IGG ANTITOXOPLASMA</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="imunologia">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">PESQUISA DE ANTICORPOS IGM e IGG ARBOVÍRUS (TESTE RÁPIDO)</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="hormonios">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE ESTRADIOL</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="hormonios">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE HORMÔNIO FOLÍCULO-ESTIMULANTE (FSH)</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="hormonios">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE HORMÔNIO LUTEINIZANTE (LH)</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="hormonios">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE HORMÔNIO TIREOESTIMULANTE (TSH)</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="hormonios">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE PROGESTERONA</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="hormonios">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE PROLACTINA</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório. Aconselhável repouso de 20 a 30 minutos antes da coleta.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="hormonios">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE TIROXINA (T4)</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="hormonios">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE TIROXINA LIVRE (T4 LIVRE)</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="hormonios">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">DOSAGEM DE TRIIODOTIRONINA (T3)</h3>
+                        <p class="text-gray-700"><strong class="font-medium text-gray-800">Preparo:</strong> Jejum não obrigatório.</p>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="urina-fezes">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">EXAME PARASITOLÓGICO DE FEZES</h3>
+                        <p class="text-gray-700 mb-2"><strong class="font-medium text-gray-800">Preparo:</strong></p>
+                        <ul class="list-disc pl-6 mt-2 text-gray-700 space-y-1">
+                            <li>Antes de coletar as fezes, se necessário, urinar no vaso sanitário para evitar a contaminação do material. Em casos de crianças utilizar coletor, se necessário.</li>
+                            <li>Evitar o uso de antiácido, laxantes e de contraste oral (utilizado em exames radiológicos no mínimo 3 dias antes da coleta das tezes ou conforme orientação medica.</li>
+                            <li>Defecar em vasilhame limpo e seco.</li>
+                            <li>Retirar frações de fezes em diferentes partes do bolo fecal (início, meio e fim) e colocar em frasco fornecido pelo laboratório ou adquirido em farmácia, sem liquido conservante, de modo que complete pelo menos meio frasco. O volume adequado de amostra corresponde a três pazinhas de plástico cheias.</li>
+                            <li>Sempre que houver muco (catarro), pus ou sangue, colher esta porção para que seja analisada, informando a presença dessas substâncias ao entregar o material.</li>
+                            <li>Caso seja visualizado algum parasita, coletá-lo informando o achado ao atendente no momento da entrega do material para o adequado processamento da amostra.</li>
+                        </ul>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="urina-fezes">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">PESQUISA DE LEUCÓCITOS NAS FEZES</h3>
+                        <p class="text-gray-700 mb-2"><strong class="font-medium text-gray-800">Preparo:</strong></p>
+                        <ul class="list-disc pl-6 mt-2 text-gray-700 space-y-1">
+                            <li>Antes de coletar as fezes, se necessário, urinar no vaso sanitário para evitar a contaminação do material. Em casos de crianças utilizar coletor, se necessário.</li>
+                            <li>Evitar o uso de antiácido, laxantes, de contraste oral (utilizado em exames radiológicos) e supositórios no mínimo 3 dias antes da coleta das fezes ou conforme orientação médica.</li>
+                            <li>Defecar em vasilhame limpo e seco.</li>
+                            <li>Retirar frações de fezes em diferentes partes do bolo fecal (início, meio e fim) e colocar em frasco fornecido pelo laboratório ou adquirido em farmácia, sem liquido conservante, de modo que complete pelo menos meio frasco. O volume adequado de amostra corresponde a três pazinhas de plástico cheias.</li>
+                            <li>Sempre que houver muco (catarro), pus ou sangue, colher esta porção para que seja analisada, informando a presença dessas substancias ao entregar o material.</li>
+                        </ul>
+                    </article>
+                    <article class="exam-item p-6 bg-white rounded-lg shadow-md border-l-4 border-lanadRed" data-category="urina-fezes">
+                        <h3 class="text-xl font-semibold mb-2 text-lanadDark">ANALISE DE CARACTERES FÍSICOS, ELEMENTOS E SEDIMENTO DA URINA (SUMÁRIO DE URINA)</h3>
+                        <p class="text-gray-700 mb-2"><strong class="font-medium text-gray-800">Preparo:</strong></p>
+                        <ul class="list-disc pl-6 mt-2 text-gray-700 space-y-1">
+                            <li>Colher preferencialmente no laboratório a 1ª urina da manhã ou com intervalo de 4 horas entre as micções.</li>
+                            <li>Fazer higiene da genitália com água e sabão, secar.</li>
+                            <li>Para urina recente (jato médio), desprezar o 1º jato de urina e coletar o jato do meio (cerca de 30 mL).</li>
+                            <li>Para coletas realizadas em casa o cliente deve entregar a urina no laboratório em no máximo 1 hora após a coleta, em temperatura ambiente ou refrigerada.</li>
+                            <li>Usar frasco limpo e adequado, comprado em farmácia ou adquirido no laboratório.</li>
+                            <li>Mulheres: não fornecemos e nem indicamos o uso de tamponamento (absorvente interno para coleta de urina no período menstrual.</li>
+                            <li>Criança: não utilizar pomadas no dia da coleta. Sempre que possível, colher no próprio laboratório tomando cuidados especiais com assepsia.</li>
+                            <li>Coleta com coletor de urina infantil: somente realizada nas dependências do laboratório.</li>
+                            <li>Manter dieta hídrica habitual.</li>
+                            <li>Não coletar urina após cliente ter ingerido dextrosol, coletar antes da ingestão ou orientar coleta no dia seguinte.</li>
+                        </ul>
+                    </article>
+                </div>
+                
+                <div id="no-results" class="text-center mt-10 p-8 bg-white rounded-lg shadow-md hidden">
+                    <h3 class="text-xl font-semibold text-lanadRed">Nenhum exame encontrado</h3>
+                    <p class="text-gray-600 mt-2">Sua busca não retornou resultados. Tente um termo diferente.</p>
+                </div>
+                
+                <div class="text-center mt-16 py-10 bg-white rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4 text-lanadDark">Não encontrou o exame que procura?</h3>
+                    <p class="text-gray-700 mb-6 max-w-xl mx-auto px-4">Nossa lista de exames está sempre crescendo para melhor atendê-lo. Se você não encontrou o que precisa, ou tem alguma dúvida, fale conosco!</p>
+                    <a href="https://wa.me/5589999877447?text=Olá!%20Gostaria%20de%20saber%20se%20o%20laboratório%20LANAD%20realiza%20um%20exame%20específico%20que%20não%20encontrei%20na%20lista%20do%20site." 
+                       target="_blank" 
+                       class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-md font-medium transition text-lg shadow-md hover:shadow-lg">
+                        <i class="fab fa-whatsapp mr-2"></i> Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+    <footer class="bg-lanadDark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <a href="index.html" class="flex items-center">
+                            <img src="fotos/logo.png" alt="LANAD Laboratório Napoleão Dias" class="h-10 mr-2">
+                        </a>
+                    </div>
+                    <p class="text-sm text-gray-300 mb-2">Laboratório de Análises Clínicas. Precisão que cuida da sua saúde.</p>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-lanadRed transition text-gray-300">Início</a></li>
+                        <li><a href="exames.html" class="hover:text-lanadRed transition text-gray-300">Orientação por Exames</a></li>
+                        <li><a href="convenios.html" class="hover:text-lanadRed transition text-gray-300">Convênios</a></li>
+                        <li><a href="unidades.html" class="hover:text-lanadRed transition text-gray-300">Unidades</a></li>
+                        <li><a href="quem-somos.html" class="hover:text-lanadRed transition text-gray-300">Sobre Nós</a></li>
+                        <li><a href="equipamentos.html" class="hover:text-lanadRed transition text-gray-300">Equipamentos</a></li>
+                        <li><a href="coleta-domiciliar.html" class="hover:text-lanadRed transition text-gray-300">Coleta Domiciliar</a></li>
+                        <li><a href="index.html#faq" class="hover:text-lanadRed transition text-gray-300">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold mb-4">Contato</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start text-gray-300"><i class="fas fa-map-marker-alt mt-1 mr-2 text-lanadRed w-4"></i><span>Rua Olavo Bilac, nº 440, Centro, Picos – PI</span></li>
+                        <li class="flex items-center text-gray-300"><i class="fas fa-phone-alt mr-2 text-lanadRed w-4"></i><span>(89) 3422-3949</span></li>
+                        <li class="flex items-center text-gray-300"><i class="fab fa-whatsapp mr-2 text-lanadRed w-4"></i><span>(89) 9 9987-7447</span></li>
+                        <li class="flex items-center text-gray-300"><i class="fas fa-envelope mr-2 text-lanadRed w-4"></i><a href="mailto:lanad@lanad.com.br" class="hover:text-lanadRed transition duration-300">lanad@lanad.com.br</a></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h4 class="text-md font-semibold mb-4">Horário (Matriz)</h4>
+                    <ul class="space-y-1 text-sm text-gray-300">
+                        <li>Segunda a Sexta: 7h às 17h30</li>
+                        <li>Sábado: 7h às 11h</li>
+                        <li>Domingo: Fechado</li>
+                    </ul>
+                    <div class="mt-4">
+                        <h4 class="text-md font-semibold mb-2">Siga-nos</h4>
+                        <div class="flex space-x-3">
+                            <a href="https://www.facebook.com/LaboratorioNapoleaoDias" class="w-8 h-8 bg-gray-700 hover:bg-lanadRed rounded-full flex items-center justify-center transition"><i class="fab fa-facebook-f text-sm"></i></a>
+                            <a href="https://www.instagram.com/lanadlab/" class="w-8 h-8 bg-gray-700 hover:bg-lanadRed rounded-full flex items-center justify-center transition"><i class="fab fa-instagram text-sm"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-sm text-center text-gray-400">
+                <p>© <span id="currentYear"></span> LANAD Laboratório. Todos os direitos reservados.</p>
+                <a href="https://www.eudiggital.com.br" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center text-textMuted dark:text-gray-500 hover:text-primary dark:hover:text-primary transition-colors duration-200 text-xs mt-2 group">
+                    Desenvolvido por EuDiggital
+                    <img src="fotos/LOGO_REDONDA_EUDIGITAL.png" alt="Logo EUDiggital"
+                        class="h-4 ml-1.5 group-hover:opacity-80 transition-opacity duration-200">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://api.whatsapp.com/send/?phone=5589999877447" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg floating-whatsapp z-50">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+    <button id="back-to-top" class="fixed bottom-24 right-6 bg-lanadRed text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg z-50 hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

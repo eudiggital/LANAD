@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Acesse o portal de resultados online do LANAD para visualizar seus laudos de forma segura e conveniente. Suporte disponível por telefone ou WhatsApp.">
+    <title>Resultados Online - LANAD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="fotos/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="fotos/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="fotos/favicon/favicon-16x16.png">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lanadRed: '#9D2E35',
+                        lanadDark: '#2A2A2A',
+                        lanadLight: '#F0F0F0',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="bg-white text-lanadDark">
+
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center">
+                    <img src="fotos/logo.png" alt="LANAD Laboratório Napoleão Dias" class="h-12 mr-2">
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link font-medium hover:text-lanadRed transition">Início</a>
+                    <div class="dropdown relative group py-4 -my-4">
+                        <a href="exames.html" class="nav-link font-medium hover:text-lanadRed transition flex items-center active"> Nossos Serviços <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-full -left-4 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white mt-0 py-2 w-52 rounded-md shadow-lg z-50">
+                            <a href="exames.html" class="block px-4 py-2 hover:bg-lanadLight">Orientação por Exames</a>
+                            <a href="convenios.html" class="block px-4 py-2 hover:bg-lanadLight">Convênios</a>
+                            <a href="resultados.html" class="block px-4 py-2 hover:bg-lanadLight active">Resultados Online</a>
+                            <a href="coleta-domiciliar.html" class="block px-4 py-2 hover:bg-lanadLight">Coleta Domiciliar</a>
+                        </div>
+                    </div>
+                    <a href="unidades.html" class="nav-link font-medium hover:text-lanadRed transition">Unidades</a>
+                    <a href="quem-somos.html" class="nav-link font-medium hover:text-lanadRed transition">Sobre Nós</a>
+                    <a href="equipamentos.html" class="nav-link font-medium hover:text-lanadRed transition">Equipamentos</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="resultados.html" class="hidden md:block bg-lanadRed text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition">Resultados</a>
+                    <button class="md:hidden focus:outline-none" id="mobile-menu-button">
+                        <i class="fas fa-bars text-xl text-lanadRed"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="md:hidden hidden bg-white py-4" id="mobile-menu">
+                <a href="index.html" class="block py-2 hover:text-lanadRed">Início</a>
+                <div class="py-2">
+                    <button class="flex items-center justify-between w-full focus:outline-none text-lanadRed" id="services-toggle">
+                        <span>Nossos Serviços</span>
+                        <i class="fas fa-chevron-up text-xs"></i>
+                    </button>
+                    <div class="pl-4 mt-2" id="services-menu">
+                        <a href="exames.html" class="block py-2 hover:text-lanadRed">Orientação por Exames</a>
+                        <a href="convenios.html" class="block py-2 hover:text-lanadRed">Convênios</a>
+                        <a href="resultados.html" class="block py-2 text-lanadRed">Resultados Online</a>
+                        <a href="coleta-domiciliar.html" class="block py-2 hover:text-lanadRed">Coleta Domiciliar</a>
+                    </div>
+                </div>
+                <a href="unidades.html" class="block py-2 hover:text-lanadRed">Unidades</a>
+                <a href="quem-somos.html" class="block py-2 hover:text-lanadRed">Sobre Nós</a>
+                <a href="equipamentos.html" class="block py-2 hover:text-lanadRed">Equipamentos</a>
+                <a href="resultados.html" class="block mt-2 bg-lanadRed text-white px-4 py-2 rounded-md text-center">Resultados</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative bg-lanadDark text-white py-20">
+            <div class="absolute inset-0">
+                <img src="fotos/resultado.jpg" alt="Equipamentos de laboratório modernos" class="w-full h-full object-cover opacity-30">
+            </div>
+            <div class="container mx-auto px-4 relative z-10 text-center">
+                <h1 class="text-4xl font-bold">Resultados Online</h1>
+                <p class="text-lg mt-2 text-gray-200">Acesse seus resultados de forma rápida, segura e conveniente.</p>
+            </div>
+        </section>
+    
+        <section id="resultados-portal" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-xl mx-auto bg-white p-8 md:p-10 rounded-lg shadow-xl border border-gray-200">
+                    <div class="text-center mb-8">
+                        <i class="fas fa-laptop-medical text-5xl text-lanadRed mb-4"></i>
+                        <h2 class="text-3xl font-semibold text-lanadDark">Portal de Resultados</h2>
+                        <p class="text-gray-600 mt-3">
+                            Utilize o portal abaixo para acessar seus resultados. Tenha em mãos os dados fornecidos no momento da coleta.
+                        </p>
+                    </div>
+                    
+                    <div class="my-6 flex justify-center">
+                        <iframe src="https://worklabweb.com.br/frame.php?Cliente=1202&i=1" name="I1" width="450" height="135" marginwidth="0" marginheight="0" frameborder="no" target="_self" scrolling="no" class="shadow-lg rounded-md"></iframe>
+                    </div>
+    
+                    <div class="mt-10 text-sm text-gray-500 text-center">
+                        <p><i class="fas fa-info-circle mr-1"></i> Seus resultados são confidenciais e protegidos. Este portal é fornecido por um sistema seguro.</p>
+                        <p class="mt-2">O tempo para disponibilização dos resultados pode variar conforme o exame realizado.</p>
+                    </div>
+                </div>
+    
+                <div class="mt-16 max-w-lg mx-auto bg-lanadLight p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-3 text-lanadRed text-center">Precisa de Ajuda?</h3>
+                    <p class="text-gray-700 mb-6 text-center">
+                        Caso não consiga acessar seus resultados ou tenha alguma dúvida,
+                        nossa equipe de atendimento está à disposição para auxiliar.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a href="tel:+558934223949" class="inline-flex items-center justify-center bg-lanadRed hover:bg-opacity-90 text-white px-6 py-3 rounded-md transition font-medium shadow hover:shadow-lg w-full sm:w-auto">
+                            <i class="fas fa-phone-alt mr-2"></i> Ligar para Suporte
+                        </a>
+                        <a href="https://wa.me/5589999877447?text=Olá!%20Estou%20com%20dificuldades%20para%20acessar%20meus%20resultados%20online." target="_blank" class="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-md transition font-medium shadow hover:shadow-lg w-full sm:w-auto">
+                            <i class="fab fa-whatsapp mr-2"></i> Suporte via WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-lanadDark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <a href="index.html" class="flex items-center">
+                            <img src="fotos/logo.png" alt="LANAD Laboratório Napoleão Dias" class="h-10 mr-2">
+                        </a>
+                    </div>
+                    <p class="text-sm text-gray-300 mb-2">Laboratório de Análises Clínicas. Precisão que cuida da sua saúde.</p>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-lanadRed transition text-gray-300">Início</a></li>
+                        <li><a href="exames.html" class="hover:text-lanadRed transition text-gray-300">Orientação por Exames</a></li>
+                        <li><a href="convenios.html" class="hover:text-lanadRed transition text-gray-300">Convênios</a></li>
+                        <li><a href="unidades.html" class="hover:text-lanadRed transition text-gray-300">Unidades</a></li>
+                        <li><a href="quem-somos.html" class="hover:text-lanadRed transition text-gray-300">Sobre Nós</a></li>
+                        <li><a href="equipamentos.html" class="hover:text-lanadRed transition text-gray-300">Equipamentos</a></li>
+                        <li><a href="coleta-domiciliar.html" class="hover:text-lanadRed transition text-gray-300">Coleta Domiciliar</a></li>
+                        <li><a href="index.html#faq" class="hover:text-lanadRed transition text-gray-300">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold mb-4">Contato</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start text-gray-300"><i class="fas fa-map-marker-alt mt-1 mr-2 text-lanadRed w-4"></i><span>Rua Olavo Bilac, nº 440, Centro, Picos – PI</span></li>
+                        <li class="flex items-center text-gray-300"><i class="fas fa-phone-alt mr-2 text-lanadRed w-4"></i><span>(89) 3422-3949</span></li>
+                        <li class="flex items-center text-gray-300"><i class="fab fa-whatsapp mr-2 text-lanadRed w-4"></i><span>(89) 9 9987-7447</span></li>
+                        <li class="flex items-center text-gray-300"><i class="fas fa-envelope mr-2 text-lanadRed w-4"></i><a href="mailto:lanad@lanad.com.br" class="hover:text-lanadRed transition duration-300">lanad@lanad.com.br</a></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h4 class="text-md font-semibold mb-4">Horário (Matriz)</h4>
+                    <ul class="space-y-1 text-sm text-gray-300">
+                        <li>Segunda a Sexta: 7h às 17h30</li>
+                        <li>Sábado: 7h às 11h</li>
+                        <li>Domingo: Fechado</li>
+                    </ul>
+                    <div class="mt-4">
+                        <h4 class="text-md font-semibold mb-2">Siga-nos</h4>
+                        <div class="flex space-x-3">
+                            <a href="https://www.facebook.com/LaboratorioNapoleaoDias" class="w-8 h-8 bg-gray-700 hover:bg-lanadRed rounded-full flex items-center justify-center transition"><i class="fab fa-facebook-f text-sm"></i></a>
+                            <a href="https://www.instagram.com/lanadlab/" class="w-8 h-8 bg-gray-700 hover:bg-lanadRed rounded-full flex items-center justify-center transition"><i class="fab fa-instagram text-sm"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-sm text-center text-gray-400">
+                <p>© <span id="currentYear"></span> LANAD Laboratório. Todos os direitos reservados.</p>
+                <a href="https://www.eudiggital.com.br" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center text-textMuted dark:text-gray-500 hover:text-primary dark:hover:text-primary transition-colors duration-200 text-xs mt-2 group">
+                    Desenvolvido por EuDiggital
+                    <img src="fotos/LOGO_REDONDA_EUDIGITAL.png" alt="Logo EUDiggital"
+                        class="h-4 ml-1.5 group-hover:opacity-80 transition-opacity duration-200">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://api.whatsapp.com/send/?phone=5589999877447" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg floating-whatsapp z-50">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+    <button id="back-to-top" class="fixed bottom-24 right-6 bg-lanadRed text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg z-50 hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

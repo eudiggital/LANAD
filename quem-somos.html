@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça a história, missão, visão e valores do LANAD. Mais de 20 anos de tradição e credibilidade em análises clínicas em Picos e região.">
+    <title>Sobre Nós - LANAD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="fotos/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="fotos/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="fotos/favicon/favicon-16x16.png">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lanadRed: '#9D2E35',
+                        lanadDark: '#2A2A2A',
+                        lanadLight: '#F0F0F0',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="bg-white text-lanadDark">
+
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center">
+                    <img src="fotos/logo.png" alt="LANAD Laboratório Napoleão Dias" class="h-12 mr-2">
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link font-medium hover:text-lanadRed transition">Início</a>
+                    <div class="dropdown relative group py-4 -my-4">
+                        <a href="exames.html" class="nav-link font-medium hover:text-lanadRed transition flex items-center"> Nossos Serviços <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-full -left-4 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white mt-0 py-2 w-52 rounded-md shadow-lg z-50">
+                            <a href="exames.html" class="block px-4 py-2 hover:bg-lanadLight">Orientação por Exames</a>
+                            <a href="convenios.html" class="block px-4 py-2 hover:bg-lanadLight">Convênios</a>
+                            <a href="resultados.html" class="block px-4 py-2 hover:bg-lanadLight">Resultados Online</a>
+                            <a href="coleta-domiciliar.html" class="block px-4 py-2 hover:bg-lanadLight">Coleta Domiciliar</a>
+                        </div>
+                    </div>
+                    <a href="unidades.html" class="nav-link font-medium hover:text-lanadRed transition">Unidades</a>
+                    <a href="quem-somos.html" class="nav-link font-medium hover:text-lanadRed transition active">Sobre Nós</a>
+                    <a href="equipamentos.html" class="nav-link font-medium hover:text-lanadRed transition">Equipamentos</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="resultados.html" class="hidden md:block bg-lanadRed text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition">Resultados</a>
+                    <button class="md:hidden focus:outline-none" id="mobile-menu-button">
+                        <i class="fas fa-bars text-xl text-lanadRed"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="md:hidden hidden bg-white py-4" id="mobile-menu">
+                <a href="index.html" class="block py-2 hover:text-lanadRed">Início</a>
+                <div class="py-2">
+                    <button class="flex items-center justify-between w-full focus:outline-none" id="services-toggle">
+                        <span>Nossos Serviços</span>
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div class="hidden pl-4 mt-2" id="services-menu">
+                        <a href="exames.html" class="block py-2 hover:text-lanadRed">Orientação por Exames</a>
+                        <a href="convenios.html" class="block py-2 hover:text-lanadRed">Convênios</a>
+                        <a href="resultados.html" class="block py-2 hover:text-lanadRed">Resultados Online</a>
+                        <a href="coleta-domiciliar.html" class="block py-2 hover:text-lanadRed">Coleta Domiciliar</a>
+                    </div>
+                </div>
+                <a href="unidades.html" class="block py-2 hover:text-lanadRed">Unidades</a>
+                <a href="quem-somos.html" class="block py-2 text-lanadRed">Sobre Nós</a>
+                <a href="equipamentos.html" class="block py-2 hover:text-lanadRed">Equipamentos</a>
+                <a href="resultados.html" class="block mt-2 bg-lanadRed text-white px-4 py-2 rounded-md text-center">Resultados</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-lanadLight py-10">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl font-bold text-lanadRed text-center">Sobre o LANAD</h1>
+                <p class="text-lg text-center text-gray-600 mt-2">Conheça nossa trajetória, política de qualidade, missão, visão e valores.</p>
+            </div>
+        </section>
+    
+        <section id="sobre-conteudo" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto"> 
+                    
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-semibold mb-6 text-lanadDark border-b-2 border-lanadRed pb-2">Institucional</h2>
+                        
+                        <div class="my-8">
+                            <img src="fotos/recepcao.jpg" alt="Imagem Institucional do LANAD Laboratório" class="w-full h-auto max-h-[400px] object-cover rounded-lg shadow-lg mx-auto">
+                        </div>
+                        
+                        <p class="mb-4 text-gray-700 leading-relaxed">Fundado em maio de 1999, o LANAD atualmente possui um núcleo técnico operacional com equipamentos de última geração, a unidade central situada em Picos e mais 6 postos de coleta na macrorregião.</p>
+                        <p class="mb-4 text-gray-700 leading-relaxed">São mais de vinte anos de história primando por oferecer qualidade nos exames e excelência nos serviços de Medicina Diagnóstica, além de uma relação mútua de confiança e companheirismo com colaboradores e parceiros.</p>
+                        <p class="mb-4 text-gray-700 leading-relaxed">Em busca de proporcionar resultados confiáveis e seguros aos seus clientes, o LANAD investe na constante atualização tecnológica de seus equipamentos e na contínua capacitação do seu corpo técnico.</p>
+                        <p class="text-gray-700 leading-relaxed">Com todos esses diferenciais, o LANAD alia tradição e credibilidade aos modernos recursos científicos, sempre buscando o aprimoramento.</p>
+                    </div>
+
+                    <section id="fundador" class="py-16 bg-lanadLight -mx-4 px-4">
+                        <div class="container mx-auto">
+                            <div class="max-w-4xl mx-auto">
+                                <h2 class="text-3xl font-bold text-center mb-12 text-lanadDark">Uma Palavra do Fundador</h2>
+                                <div class="bg-white p-8 rounded-lg shadow-xl flex flex-col md:flex-row items-center gap-8 lg:gap-12">
+                                    
+                                    <div class="md:w-1/3 w-full flex-shrink-0">
+                                        <img src="fotos/IMG_4446.jpg" alt="Dr. Napoleão Dias, Fundador do LANAD" class="w-full h-auto object-cover rounded-lg shadow-md border-4 border-white">
+                                    </div>
+
+                                    <div class="md:w-2/3 w-full">
+                                        <h3 class="text-2xl font-bold text-lanadRed mb-2">Dr. Napoleão Dias</h3>
+                                        <p class="text-md text-gray-500 mb-4 font-medium">Fundador e Diretor do Laboratório LANAD</p>
+
+                                        <blockquote class="border-l-4 border-lanadRed pl-4 italic text-gray-600 my-5">
+                                            "Nossa missão sempre foi aliar a precisão da tecnologia ao cuidado humano, oferecendo um serviço de diagnóstico em que a comunidade de Picos e região possa confiar plenamente."
+                                        </blockquote>
+
+                                        <p class="text-gray-700 leading-relaxed mb-4">
+                                            Farmacêutico-Bioquímico graduado pela Universidade Estadual da Paraíba em 1998, com Mestrado em Economia de Empresas pela Universidade Federal do Ceará (UFC). Possui especialização em Hematologia Clínica e Citologia Clínica, além do título de Citologista conferido pela Sociedade Brasileira de Citologia Clínica.
+                                        </p>
+                                        <p class="text-gray-700 leading-relaxed">
+                                            Sua carreira profissional é consolidada em Picos-PI, onde atua como Farmacêutico-Bioquímico efetivo no Hospital Regional Justino Luz e no Centro de Testagem e Acolhimento (CTA). É também o empreendedor à frente do LANAD - Laboratório Napoleão Dias, na função de proprietário e diretor.
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="mb-12 pt-16">
+                        <h2 class="text-3xl font-semibold mb-6 text-lanadDark border-b-2 border-lanadRed pb-2">Política de Qualidade</h2>
+                        <p class="text-gray-700 leading-relaxed">O LANAD assume o compromisso de buscar a excelência em análises clínicas através da implantação de um sistema de gestão de qualidade.</p>
+                    </div>
+    
+                    <div class="mb-12">
+                        <div class="mb-8">
+                            <h3 class="text-2xl font-semibold mb-3 text-lanadRed flex items-center"><i class="fas fa-bullseye mr-3"></i>Missão</h3>
+                            <p class="text-gray-700 leading-relaxed">Contribuir para o diagnóstico, acompanhamento e tratamento de nossos pacientes com exames de qualidade que reflitam o estado real dos mesmos.</p>
+                        </div>
+                        <div class="mb-8">
+                            <h3 class="text-2xl font-semibold mb-3 text-lanadRed flex items-center"><i class="fas fa-eye mr-3"></i>Visão</h3>
+                            <p class="text-gray-700 leading-relaxed">Ser reconhecido como referência no mercado de exames laboratoriais como padrão de excelência para nossos clientes e profissionais da saúde.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-4 text-lanadRed flex items-center"><i class="fas fa-gem mr-3"></i>Valores</h3>
+                            <ul class="list-none space-y-4">
+                                <li class="pl-6 relative">
+                                    <i class="fas fa-shield-alt text-lanadRed absolute left-0 top-1"></i>
+                                    <strong class="font-semibold text-lanadDark">ÉTICA:</strong> <span class="text-gray-600 leading-relaxed">transparência e respeito ao próximo.</span>
+                                </li>
+                                <li class="pl-6 relative">
+                                    <i class="fas fa-hands-helping text-lanadRed absolute left-0 top-1"></i>
+                                    <strong class="font-semibold text-lanadDark">RESPEITO:</strong> <span class="text-gray-600 leading-relaxed">ter o relacionamento com os nossos clientes baseado em confiança, respeito e credibilidade.</span>
+                                </li>
+                                <li class="pl-6 relative">
+                                    <i class="fas fa-users-cog text-lanadRed absolute left-0 top-1"></i>
+                                    <strong class="font-semibold text-lanadDark">COMPROMISSO:</strong> <span class="text-gray-600 leading-relaxed">caminhar junto aos colaboradores, trabalhando sempre pela melhoria crescente de nossos serviços para alcançar à acreditação em serviços laboratoriais.</span>
+                                </li>
+                                <li class="pl-6 relative">
+                                    <i class="fas fa-lightbulb text-lanadRed absolute left-0 top-1"></i>
+                                    <strong class="font-semibold text-lanadDark">INOVAÇÃO:</strong> <span class="text-gray-600 leading-relaxed">sempre inovar para melhoria da qualidade e eficiência de nossos serviços, investindo em equipamentos novos e automatizados.</span>
+                                </li>
+                                <li class="pl-6 relative">
+                                    <i class="fas fa-stopwatch-20 text-lanadRed absolute left-0 top-1"></i>
+                                    <strong class="font-semibold text-lanadDark">AGILIDADE:</strong> <span class="text-gray-600 leading-relaxed">contamos com softwares modernos, visando à agilidade nos resultados.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="py-16 bg-lanadLight">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-10 text-lanadDark">Nossas Instalações</h2>
+                <p class="text-center text-lg text-gray-600 mb-10 max-w-3xl mx-auto">Ambientes modernos, confortáveis e equipados com tecnologia de ponta para oferecer a melhor experiência e precisão em seus exames.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="rounded-lg overflow-hidden shadow-lg aspect-w-16 aspect-h-9">
+                        <img src="fotos/sobrenos.jpg" alt="Recepção do Laboratório LANAD" class="w-full h-full object-cover">
+                    </div>
+                    <div class="rounded-lg overflow-hidden shadow-lg aspect-w-16 aspect-h-9">
+                        <img src="fotos/area2.jpg" alt="Sala de Coleta do LANAD" class="w-full h-full object-cover">
+                    </div>
+                    <div class="rounded-lg overflow-hidden shadow-lg aspect-w-16 aspect-h-9">
+                        <img src="fotos/area tecnica.JPG" alt="Área Técnica do Laboratório LANAD" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="depoimentos-todos" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-lanadDark">O que Nossos Pacientes Dizem</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="testimonial-card bg-lanadLight p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-lanadRed flex items-center justify-center text-white font-bold mr-4">A</div>
+                            <div><h4 class="font-semibold text-lanadDark">Ana Maria B.</h4><div class="flex text-yellow-400"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
+                        </div>
+                        <p class="text-gray-600">"Atendimento excelente e resultados rápidos. Fui muito bem tratada por toda a equipe do LANAD."</p>
+                    </div>
+                    <div class="testimonial-card bg-lanadLight p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-lanadRed flex items-center justify-center text-white font-bold mr-4">J</div>
+                            <div><h4 class="font-semibold text-lanadDark">José Carlos P.</h4><div class="flex text-yellow-400"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div>
+                        </div>
+                        <p class="text-gray-600">"Laboratório muito limpo e organizado. Os exames foram feitos com cuidado e os resultados vieram antes do prazo."</p>
+                    </div>
+                    <div class="testimonial-card bg-lanadLight p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-lanadRed flex items-center justify-center text-white font-bold mr-4">M</div>
+                            <div><h4 class="font-semibold text-lanadDark">Mariana Silva F.</h4><div class="flex text-yellow-400"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div></div>
+                        </div>
+                        <p class="text-gray-600">"Profissionais muito atenciosos. Explicaram todo o processo e me deixaram tranquila durante a coleta."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-lanadDark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <a href="index.html" class="flex items-center">
+                            <img src="fotos/logo.png" alt="LANAD Laboratório Napoleão Dias" class="h-10 mr-2">
+                        </a>
+                    </div>
+                    <p class="text-sm text-gray-300 mb-2">Laboratório de Análises Clínicas. Precisão que cuida da sua saúde.</p>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-lanadRed transition text-gray-300">Início</a></li>
+                        <li><a href="exames.html" class="hover:text-lanadRed transition text-gray-300">Orientação por Exames</a></li>
+                        <li><a href="convenios.html" class="hover:text-lanadRed transition text-gray-300">Convênios</a></li>
+                        <li><a href="unidades.html" class="hover:text-lanadRed transition text-gray-300">Unidades</a></li>
+                        <li><a href="quem-somos.html" class="hover:text-lanadRed transition text-gray-300">Sobre Nós</a></li>
+                        <li><a href="equipamentos.html" class="hover:text-lanadRed transition text-gray-300">Equipamentos</a></li>
+                        <li><a href="coleta-domiciliar.html" class="hover:text-lanadRed transition text-gray-300">Coleta Domiciliar</a></li>
+                        <li><a href="index.html#faq" class="hover:text-lanadRed transition text-gray-300">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold mb-4">Contato</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start text-gray-300"><i class="fas fa-map-marker-alt mt-1 mr-2 text-lanadRed w-4"></i><span>Rua Olavo Bilac, nº 440, Centro, Picos – PI</span></li>
+                        <li class="flex items-center text-gray-300"><i class="fas fa-phone-alt mr-2 text-lanadRed w-4"></i><span>(89) 3422-3949</span></li>
+                        <li class="flex items-center text-gray-300"><i class="fab fa-whatsapp mr-2 text-lanadRed w-4"></i><span>(89) 9 9987-7447</span></li>
+                        <li class="flex items-center text-gray-300"><i class="fas fa-envelope mr-2 text-lanadRed w-4"></i><a href="mailto:lanad@lanad.com.br" class="hover:text-lanadRed transition duration-300">lanad@lanad.com.br</a></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h4 class="text-md font-semibold mb-4">Horário (Matriz)</h4>
+                    <ul class="space-y-1 text-sm text-gray-300">
+                        <li>Segunda a Sexta: 7h às 17h30</li>
+                        <li>Sábado: 7h às 11h</li>
+                        <li>Domingo: Fechado</li>
+                    </ul>
+                    <div class="mt-4">
+                        <h4 class="text-md font-semibold mb-2">Siga-nos</h4>
+                        <div class="flex space-x-3">
+                            <a href="https://www.facebook.com/LaboratorioNapoleaoDias" class="w-8 h-8 bg-gray-700 hover:bg-lanadRed rounded-full flex items-center justify-center transition"><i class="fab fa-facebook-f text-sm"></i></a>
+                            <a href="https://www.instagram.com/lanadlab/" class="w-8 h-8 bg-gray-700 hover:bg-lanadRed rounded-full flex items-center justify-center transition"><i class="fab fa-instagram text-sm"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-sm text-center text-gray-400">
+                <p>© <span id="currentYear"></span> LANAD Laboratório. Todos os direitos reservados.</p>
+                <a href="https://www.eudiggital.com.br" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center text-textMuted dark:text-gray-500 hover:text-primary dark:hover:text-primary transition-colors duration-200 text-xs mt-2 group">
+                    Desenvolvido por EuDiggital
+                    <img src="fotos/LOGO_REDONDA_EUDIGITAL.png" alt="Logo EUDiggital"
+                        class="h-4 ml-1.5 group-hover:opacity-80 transition-opacity duration-200">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://api.whatsapp.com/send/?phone=5589999877447" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg floating-whatsapp z-50">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+    <button id="back-to-top" class="fixed bottom-24 right-6 bg-lanadRed text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg z-50 hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
