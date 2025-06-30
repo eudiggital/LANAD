@@ -126,12 +126,15 @@
     </header>
 
     <main>
-        <section id="home" class="animated-gradient-hero flex items-center justify-center min-h-[75vh] md:min-h-[85vh] py-20 text-center">
-            <div id="particles-js"></div>
-            <div class="hero-content-container container mx-auto px-4">
-                <h1 class="hero-title text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">LANAD</h1>
-                <p class="hero-subtitle text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-gray-200">Laboratório Napoleão Dias</p>
-                <div class="hero-buttons-container flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
+        <section id="home" class="relative text-center overflow-hidden bg-lanadDark">
+            <div class="absolute inset-0">
+                <img src="fotos/recepcao.jpg" alt="Mãe e filho no laboratório" class="w-full h-full object-cover object-center opacity-40">
+                <div class="absolute inset-0 bg-gradient-to-t from-lanadDark via-lanadDark/70 to-transparent"></div>
+            </div>
+            <div class="relative container mx-auto px-4 py-20 min-h-[75vh] md:min-h-[85vh] flex flex-col items-center justify-center text-white">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">LANAD</h1>
+                <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-gray-200">Laboratório Napoleão Dias</p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
                     <a href="https://wa.me/5589999877447?text=Olá!%20Gostaria%20de%20agendar%20um%20exame." target="_blank" class="bg-white hover:bg-gray-200 text-lanadRed px-8 py-3 rounded-lg font-semibold transition duration-300 shadow-lg hover:shadow-xl text-lg transform hover:scale-105">Agende seu Exame</a>
                     <a href="resultados.html" class="bg-lanadRed hover:bg-opacity-80 text-white px-8 py-3 rounded-lg font-semibold transition duration-300 shadow-lg hover:shadow-xl text-lg transform hover:scale-105">Resultados Online</a>
                     <a href="exames.html" class="border-2 border-white hover:bg-white hover:text-lanadRed text-white px-8 py-3 rounded-lg font-semibold transition duration-300 shadow-lg hover:shadow-xl text-lg transform hover:scale-105">Nossos Exames</a>
